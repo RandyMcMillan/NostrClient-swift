@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "nostrkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cnixbtc/NostrKit.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "9b343826a0d60c5d77f790166f42fe8bbd263172"
+      }
+    },
+    {
+      "identity" : "secp256k1.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GigaBitcoin/secp256k1.swift",
+      "state" : {
+        "revision" : "b80388789a8058fc99202436225f8f15d35dfbea",
+        "version" : "0.8.1"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "fee6933f37fde9a5e12a1e4aeaa93fe60116ff2a",
+        "version" : "1.2.2"
+      }
+    },
+    {
+      "identity" : "swift-crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-crypto.git",
+      "state" : {
+        "revision" : "d9825fa541df64b1a7b182178d61b9a82730d01f",
+        "version" : "2.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
