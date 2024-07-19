@@ -10,25 +10,32 @@ import ArgumentParser
 import NostrKit
 
 /// デフォルトリレー
-let defaultRelay: String = "wss://relay.damus.io"
+// let defaultRelay: String = "wss://relay.damus.io"
+let defaultRelay: String = "wss://e.nos.lol"
 
 /// Nostrクライアント
 struct NostrSendMessage: ParsableCommand {
     /// プライベートキー
-    @Argument(help: "PrivateKey(Hex) is required")
-    var privateKey: String
+    @Option(help: "PrivateKey(Hex) is required")
+    var sec: String
 
     /// 内容
     @Argument(help: "Content is required")
     var content: String
 
+    @Option(help: "-t <string>")
+    var t: String?
+
+    @Option(help: "--tag <string> <string>")
+    var tag: String?
+
     /// リレー
-    @Option(help: "relay")
+    @Option(help: "ws://<relay_uri>, wss://<relay_uri>")
     var relay: String?
 
     /// 実行
     func run() throws {
-        let event = try Event(keyPair: .init(privateKey: privateKey), content: content)
+        let event = try Event(keyPair: .init(privateKey: sec), content: content)
         let message = try ClientMessage.event(event).string()
         let relay = relay ?? defaultRelay
         print("message: \(message), relay: \(relay)")
